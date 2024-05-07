@@ -53,6 +53,7 @@ C = 8 / 3
 t0 = 0
 dt = 0.02
 tmax = 70
+linewidth = 0.7
 
 
 results_euler = euler_method(f, y0, t0, dt, tmax, A, B, C)
@@ -67,7 +68,7 @@ x_rk4 = results_rk4[:, 0]
 z_rk4 = results_rk4[:, 2]
 
 plt.figure()
-plt.plot(x_euler, z_euler, linewidth=0.7)
+plt.plot(x_euler, z_euler, linewidth=linewidth)
 plt.xlabel('x')
 plt.ylabel('z')
 plt.title('Euler Method')
@@ -75,7 +76,7 @@ plt.grid(True)
 plt.show()
 
 plt.figure()
-plt.plot(x_midpoint, z_midpoint, linewidth=0.7)
+plt.plot(x_midpoint, z_midpoint, linewidth=linewidth)
 plt.xlabel('x')
 plt.ylabel('z')
 plt.title('Midpoint Method')
@@ -83,7 +84,7 @@ plt.grid(True)
 plt.show()
 
 plt.figure()
-plt.plot(x_rk4, z_rk4, linewidth=0.7)
+plt.plot(x_rk4, z_rk4, linewidth=linewidth)
 plt.xlabel('x')
 plt.ylabel('z')
 plt.title('RK4 Method')
